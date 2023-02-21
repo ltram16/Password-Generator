@@ -10,3 +10,5 @@ This repository contains a password generator that allows users to go generate p
 https://ltram16.github.io/Password-Generator/Develop/
 
 ## Screenshot
+
+<img src="Screenshot 2023-02-20 at 10.43.06 PM.png">
