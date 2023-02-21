@@ -28,12 +28,19 @@ generateBtn.addEventListener("click", writePassword);
 // Function to generate password
 function generatePassword() {
   // add prompts to generate password
-  var passwordLength = prompt('How many characters do you want to include in the password? (8 - 128 characters)', '10');
+  var passwordLength = prompt('How many characters do you want to include in the password? (8 - 128 characters)',);
+  // add alert to redo if the password length is less than 8 or greater 128
+  if (passwordLength > 128 || passwordLength < 8) {
+    alert("Please choose between 8 and 128 characters.")
+    return generatePassword()
+  }
+
   var useUppercase = confirm('Would you like to include uppercase letters? Click OK to use.');
   var useLowercase = confirm('Would you like to include lowercase letters? Click OK to use.');
   var useNumbers = confirm('Would you like to include numbers? Click OK to use.');
   var usespecialChar = confirm('Would you like to include special characters? Click OK to use.');
 
+  // add characters based on user's input
   var userInput = [];
   if (useUppercase) {
     userInput = userInput.concat(uppercase);
@@ -56,5 +63,6 @@ function generatePassword() {
   for (var i = 0; i < passwordLength; i++) {
     password = password + userInput[getRandomChar(userInput.length)]
   }
-  console.log(password)
+  
+  return password
 }
