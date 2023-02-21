@@ -7,6 +7,12 @@ const lowercase = ["a", "b", "c", "d", "d", "f", "g", "h", "i", "j", "k", "l", "
 const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const specialCharacters = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "=", ",", ";", ":", "{", "}", "[", "]", "/", "?", "-", "_", "."];
 
+// Add function to get random integers
+// use sample code https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+function getRandomChar(max) {
+  return Math.floor(Math.random() * max);
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -45,4 +51,10 @@ function generatePassword() {
     userInput = userInput.concat(specialCharacters);
   }
 
+
+  var password = '';
+  for (var i = 0; i < passwordLength; i++) {
+    password = password + userInput[getRandomChar(userInput.length)]
+  }
+  console.log(password)
 }
