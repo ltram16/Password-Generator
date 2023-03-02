@@ -7,7 +7,7 @@ This repository contains a password generator that allows users to generate pass
 
 ## Link to deployed application
 
-https://ltram16.github.io/Password-Generator/Develop/
+https://ltram16.github.io/password-generator/Develop/
 
 ## Screenshot
 
